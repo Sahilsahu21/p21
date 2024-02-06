@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+
+    }
+ .navbar{
+            background-color: red;
+            color: rgb(247, 243, 239);
+            border-radius: 30px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+            color: rgb(252, 244, 244);
+            background-color: rgb(0, 3, 3);
+            font-family: sans-serif;
+            font-size: 20px;
+
+           text-align: center;
+        }
+
+        .navbar li{
+            color: #ffffff;
+
+            float: right;
+             margin: 13px;
+            padding:3px;
+
+        }
+        .navbar ul :hover{
+           color: rgb(47, 0, 255);
+        }
+        .navbar li a{
+            color: bisque;
+            background: #000;
+        }
+        .navbar a{
+            list-style: none;
+        }
+
+        .info{
+            
+            margin-left: 7%;
+            margin-top: 6%;
+            position: absolute;
+            width: 75%;
+        
+        }
+        
+        .info h1{
+            
+            font-size: 75px;
+            color: rgb(255, 255, 255);
+        }
+        
+        .info h3{
+            font-size: 18px;
+            letter-spacing: 1px;
+            line-height: 24px;
+            color: aqua;
+        }
+        
+        .info span{
+          font-family: sans-serif;
+            color: rgb(222, 255, 10);
+        
+        }
+        
+        .info a{
+            text-decoration:  none;
+            color: #0f0000;
+            background: rgb(255, 255, 255);
+            margin: 26px 0;
+            padding: 10px 18px;
+            border-radius: 10px;
+            display: inline-block;
+            transition: .4s ease;
+        }
+        
+        .info a:hover{
+            color:rgb(24, 33, 112);
+        }
+        
+        body{
+            background-color: #000;
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+          }
+           a{
+        text-decoration: none;
+    }
+    .image{
+        position: relative;
+        float: right;
+        top: -300px;
+        right: -40px;
+        width:  30vw;
+        height: 80vh;
+    }
+    
+    .container{
+        position: relative;
+        width: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 30px;
+        margin-top: 30%;
+        
+ 
+    }
+    .container .cart{
+        width:250px;
+position: relative;
+height: 400px;
+background: #f0f0f0;
+margin:300px 10px;
+padding: 30px 10px;
+display:flex;
+flex-direction: column;
+box-shadow: 0.5px 10px #e6e6e6;
+transition:0.3s ease-in-out;
+margin-top: -30%;
+text-align: left;
+    }
+    .container .cart .imgbox{
+        position: relative;
+width:260px;
+height: 260px;
+top: -60px;
+left:20px;
+box-shadow: 0 5px 20px rbga (0,0,0,1.2);
+
+    }
+    .container .cart .imgbox .img{
+        max-width: 100%;
+border-radius: 10px;
+    }
+
+
+
+   
+.imgbox:hover img{
+transform: scale(1.1);
+}
+
+.info h4{
+
+    top: 100px;
+    color: #ffffff;
+        font-weight: normal;
+        font-size: 50px;
+        position: relative;
+        text-align: center;
+        right: -10px;
+        margin: 40px 0;
+    }
+   .info h4::before{
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 3px;
+        background-color: rgb(217, 220, 20);
+        bottom: -10px;
+        right: 450px;
+        transform: translate(-50%);
+        animation: animate 4s linear infinite;
+    }
+    #heading{
+        color: #ffffff;
+        font-size: 40px;
+        margin-top: -30%;
+    }
+    #heading::before{
+        content: '';
+        position: absolute;
+        width: 300px;
+        height: 5px;
+        background-color: rgb(255, 255, 23);
+        bottom: 120px;
+        right: 190px;
+        transform: translate(-50%);
+        animation: animate 4s linear infinite;
+    }
+    /* services */
+
+    #services h3{
+      margin-top: -300px;
+    width: 100%;
+    border-bottom: 0.5px solid #dddddd;;
+ }
+
+#services h3 span{
+    background: #ddd;
+    padding: 10px 22px;
+    color: #333;
+    text-align: center;
+    display: inline-block;
+ }
+
+ #services .box{
+    
+    width: 30.33%;
+    padding: 45px;
+    text-align: center;
+    margin: 50px 10px;
+ }
+
+ .bg-primary{
+ background: #265ede;
+    color: #fff;
+ }
+
+ .light-gray{
+    background: #ddd;
+    color: black;
+ }
+
+ #services h2{
+    
+  margin-bottom: 40px;
+ }
+.info h5{
+    color: white;
+     padding: 2%;
+}
+.infra{
+top: -40px;
+    position: relative;
+}
+.picture{
+ 
+    position: relative;
+    top: 100px;
+}
+.whowe{
+    color: #fff;
+}
+.whowe h3{
+    color: #ddd;
+    
+    font-size: 30px;
+    padding: 50px;
+   
+}
+.whowe h4{
+
+  color: #ffffff;
+  text-align: center;
+}
+.whowe h4::before{
+  content: '';
+        position: absolute;
+        width: 300px;
+        height: 3px;
+        background-color: rgb(217, 220, 20);
+        bottom: -10px;
+        right: 250px;
+        transform: translate(-50%);
+        animation: animate 4s linear infinite;
+}
+.whowe .picture{
+  padding: 200px;
+  margin: 10px;
+  margin-top: -150px;
+}
+.whowe p{
+   padding: 100px;
+    font-size: 20px;
+    color: #ccd5eb;
+}
+
+.imggallary{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    grid-gap: 30px;
+}
+.imggallary img{
+    width: 100%;
+    cursor: pointer;
+}
+.imggallary img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 7px rgba(68, 77, 136, o.2);
+}
+.fullimg{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+
+}
+/* .fullimg img{
+    width: 90%;
+    max-width: 500px;
+}
+.fullimg span{
+    position: absolute;
+    top:5%;
+    right: 5%;
+    font-size: 30px;
+    color:#fff;
+    cursor: pointer;
+} */
+.nextsection img{
+  width: 900px;
+  height: 500px;
+  
+  margin: 30px;
+    
+}
+.nextsection h3{
+    padding: 100px;
+
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    
+}
+.nextsection h3::before{
+         /* content: '';
+        position: absolute;
+        width: 300px;
+        height: 3px;
+        background-color: rgb(217, 220, 20);
+        
+        right: 500px;
+       */
+}
+
+.nextsection p{
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+
+.price__grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.price__card {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color-light);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.price__card:hover {
+  background-color: var(--primary-color-extra-light);
+  border-color: var(--secondary-color);
+}
+
+.price__card__content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.price__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.price__card h3 {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  border-bottom: 2px solid var(--white);
+}
+
+.price__card p {
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+
+.price__card p i {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.price__btn {
+  color: var(--secondary-color);
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+}
+
+.price__btn:hover {
+  color: var(--white);
+  background-color: var(--secondary-color);
+}
+:root {
+  --primary-color: #111317;
+  --primary-color-light: #1f2125;
+  --primary-color-extra-light: #35373b;
+  --secondary-color: #f9ac54;
+  --secondary-color-dark: #c46800;
+  --text-light: #d1d5db;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+}
+
+.section__subheader {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  color: var(--text-light);
+}
+@media(max-width:500px) {
+  
+  .navbar{
+            background-color: red;
+            color: rgb(247, 243, 239);
+            border-radius: 50px;
+
+        }
+        .navbar ul{
+            overflow: auto;
+            color: rgb(252, 244, 244);
+            background-color: rgb(0, 3, 3);
+            font-family: sans-serif;
+            font-size: 30px;
+
+           text-align: center;
+        }
+
+        .navbar li{
+            color: #ffffff;
+
+            float: left;
+             margin: 0px;
+            padding:30px;
+
+        }
+        .navbar ul :hover{
+           color: rgb(47, 0, 255);
+        }
+        .navbar li a{
+            color: bisque;
+            background: #000;
+        }
+        .navbar a{
+            list-style: none;
+        }
+
+        .info{
+            
+            margin-left: 20%;
+            margin-top: 6%;
+            position: relative;
+            width: 75%;
+        
+        }
+        
+        .info h1{
+            
+            font-size: 250px;
+            color: rgb(255, 255, 255);
+        }
+        .info h5{
+          font-size: 30px;
+          text-align: center;
+        }
+        
+        .info h3{
+            font-size: 25px;
+            letter-spacing: 1px;
+            line-height: 40px;
+            color: aqua;
+            display: inline-block;
+          
+        }
+        
+        .info span{
+          font-family: sans-serif;
+            color: rgb(222, 255, 10);
+        
+        }
+        
+        .info a{
+            text-decoration:  none;
+            color: #0f0000;
+            background: rgb(255, 255, 255);
+            margin: 26px 0;
+            padding: 10px 18px;
+            border-radius: 10px;
+            display: inline-block;
+            transition: .4s ease;
+        }
+        
+        .info a:hover{
+            color:rgb(24, 33, 112);
+        }
+        .info img{
+          display: none;
+          top: -200px;
+        }
+        .orservice h4{
+          top: -300px;
+          font-size: 110px;
+          margin-bottom: -600px;
+          right:-200px
+        }
+       
+
+        }
+
+
+        /* //footer// */
+        ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+  margin-top: -200px;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-right: 550px;
+  display: inline-block;
+}
+.cta-text h6 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: right;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu{
+  
+}
+.footer-menu li {
+  
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 18px;
+  color: #000000;
+}
+
+
+</style>
+<body>
+    
+<div class="navbar">
+    <ul>
+        <a href="p2.html"><li> Contact Us </li></a>
+        <a href=""><li>Service & Sector </li></a>
+        <a href=""><li>Team</li></a>
+        <a href=""><li>Core Value</li></a>
+        <a href="aboutcidcon.HTML"><li>About Us</li></a>
+        <a href=""><li>Home</li></a>
+      
+    </ul>
+</div>
+<section class="info">
+    
+  <h1><span>C</span>ID<span>C</span>ON</h1>
+  <H5>Corventive Infrastructure Development <br>and Consultancy Pvt 
+    Ltd (CIDCON)</H5>
+    <h3>CAPACITY BUILDINGS ,TRAINING</h3>
+    <h3>& INSTITUTIONAL DEVLOPEMENT <br>-  TOPOGRAPHICAL & AERIAL SURVEYS <br>- PROJECT MANAGEMENT SERVICES <br>- ENGINEERING GROWTH<br>- DETAILED PROJECT REPORT</h3> 
+    <a href="#">Contact us</a>
+    <div class="image">
+        <img src="p21.jpeg" alt="" height="400px" width="550px">
+    </div>
+          <div class="orservice">
+
+            <h4>Services</h4>
+          </div>
+        <div class="container">
+            
+            <div class="cart">
+                <div class="imgbox">
+                    <a href="">
+                        <img src="p21.jpeg" alt="" width="170px">
+                    </a>
+
+                    <h2>Social Sector</h2>
+                    <p><br> • Environment <br>
+                        • Agriculture <br> 
+                        • Educationbr
+                        <br>
+                        • Public Health & Sanitation <br>
+                        • Family Welfare <br> 
+                       
+                        • Nutrition, Food Security
+                        <br> 
+                        • Poverty Alleviation </p>
+                    </div>     
+                </div>
+
+                <div class="cart">
+                    <div class="imgbox">
+                        <a href="">
+                            <img src="infrastructure1.jpeg" alt="" width="170px" >
+                        </a>
+    
+                        <h2>Infrastructure</h2>
+                        <p><br> • Housing Development <br>
+                            • Telecommunication <br> 
+                            • Transportation <br>
+                            • Water Supply <br>
+                            • Environment Protection </p>
+                        </div>
+                        
+                    </div>
+                    <div class="cart">
+                        <div class="imgbox">
+                            <a href="">
+                                <img src="marketing.jpeg" alt="" width="170px">
+                            </a>
+        
+                            <h2>Marketing  </h2>
+                            <p><br> • Customer <br>
+                                • Perception <br> 
+                                • Trade <br>
+                                • Rural Market Research <br>
+                                • Advertising <br>
+                                • Market Feasibility <br> 
+                                • Field Survey</p>
+                            </div>
+                         </div>   
+
+                        <div id="heading">
+                            Presence and Coverage
+                        </div> 
+                    
+                    </div>
+                         <div class="pic">
+                            <img src="pcmap.png" alt="" width="1200px">
+        </div>
+        <div id="services">
+            <div class="container">
+              <h3 class="bg-dark-line"><span>Services</span></h3>
+              <div class="box bg-primary">
+                <h2>Social / Development </h2>
+                <i class="fa-solid fa-paintbrush fa-4x"></i>
+                <p class="lead">
+                  Training workshops on sustainable farming practices.
+      Establishment of demonstration farms.
+      Facilitation of access to inputs and markets.
+      Community mobilizationg.
+                </p>
+              </div>
+              <div class="box light-gray">
+               <div class="infra">
+
+                   <img src="">
+                   
+                </div>
+                   <h2>Infrastructure  </h2>
+                <i class="fa-solid fa-code fa-4x"></i>
+                <p class="lead">
+                  Commitment to quality, integrity collab ,innovation, ,= and sustainability Comprehensive solutions in transportation, energy, and environmental sustainability.
+                </p>
+              </div>
+              <div class="box bg-primary">
+                <h2>Marketing Sector </h2>
+                <i class="fa-solid fa-desktop fa-4x"></i>
+                <p class="lead">
+                  The marketing sector involves promoting and selling products or services through activities like a market research, advertising, branding, and sales strategies. 
+                </p>
+              </div>
+            </div>
+          </div>
+      
+        
+          <div class="whowe">
+            <h4>WHO WE ARE ?</h4>
+            <div class="picture">
+                <img src="infrastructure4.jpeg" alt="" width="800x" height="600px">
+            </div>
+            <h3>Corventive Infrastructure Development and Consultancy Pvt Ltd</h3>
+
+            <p>Corventive Infrastructure Development and Consultancy Pvt Ltd is a dynamic company at the forefront of the infrastructure sector, offering comprehensive solutions and consultancy services. Our mission revolves around delivering top-notch infrastructure projects that not only meet the needs of today but also contribute to sustainable development. Specializing in diverse sectors such as transportation, energy, water resources, and urban development, our core services include meticulous planning, innovative design, and precise project execution. With a team of highly skilled professionals encompassing various disciplines, we provide consultancy services covering feasibility studies, project management, risk assessment, environmental impact assessment, and regulatory compliance. At the heart of our operations is a commitment to sustainability, demonstrated through environmentally conscious practices and cutting-edge technologies. Our proven track record showcases successful project deliveries across a range of scales, emphasizing our ability to navigate challenges and meet stringent quality standards. Quality and safety are paramount in our operations, adhering to international standards to ensure the durability and reliability of our infrastructure assets. Committed to corporate social responsibility, we actively engage in initiatives benefitting communities, reinforcing our dedication to making a positive impact. Looking ahead, we remain focused on continuous improvement, global expansion, strategic partnerships, and leveraging emerging technologies to address the evolving infrastructure needs of the world. Corventive Infrastructure Development and Consultancy Pvt Ltd stands as a trusted and innovative partner in shaping a sustainable and resilient future.</p>
+          </div>
+          <!-- <div class="fulimg">
+            <img src="infracturedark.jpeg" alt="">
+            <span>X</span>
+          </div> -->
+
+     <div class="imggallary">
+        <img src="infracture2.jpeg" alt="">
+        <img src="infracture3.jpeg" alt="">
+        <img src="infrastructure4.jpeg" alt="">
+        <img src="infrastructure1.jpeg" alt="">
+        <img src="infractureultrahd.jpg" alt="">
+        <img src="infracture3.jpeg" alt="">
+        <img src="infrastructure4.jpeg" alt="">
+        <img src="infrastructure1.jpeg" alt="">
+        <img src="p21.jpeg" alt="">
+        <!-- <img src="planing2.jpeg" alt=""> -->
+         </div>
+         <div class="nextsection">
+            <h3>  Core Value  </h3>
+            <img src="presence.png" alt="">
+            <p>Core values are fundamental beliefs or guiding principles that dictate behavior and decision-making within an organization or individual. They serve as a compass, guiding actions and shaping the culture of the entity they represent. Core values are typically timeless and enduring, reflecting the essence of what an organization or individual stands for. They provide a sense of identity, purpose, and direction.
+
+In a paragraph, core values can be described as the bedrock upon which an organization or individual's actions and decisions are built. They embody the fundamental principles and beliefs that drive behavior and define the character of the entity. Core values serve as a North Star, guiding choices, interactions, and priorities, even in the face of challenges or changing circumstances. Whether it's integrity, innovation, teamwork, or any other value deemed essential, they are the pillars upon which success and fulfillment are built, shaping the ethos and identity of the entity they represent.</p>
+         </div>
+
+
+
+         <section class="section__container price__container">
+            <h2 class="section__header">Our Core Value Plans</h2>
+            <p class="section__subheader">
+                Core values are fundamental beliefs or guiding principles that dictate behavior and decision
+            </p>
+            <div class="price__grid">
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>LEADERSHIP</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Communication
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Decision-making
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Empowerment
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Accountability
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Adaptability
+                  </p>
+                </div>
+                <button class="btn price__btn">Learn More</button>
+              </div>
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>TRUST</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Reliability
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Empathy
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Confidentiality
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Respect
+                  </p>
+                  
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Follow-through
+                  </p>
+                  
+
+                </div>
+                <button class="btn price__btn">Read More</button>
+              </div>
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>Respons</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Accountability
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Proactivity
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Ethical Behavior
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Communication
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Collaboration
+                  </p>
+                </div>
+                <button class="btn price__btn">Read More</button>
+              </div>
+            </div>
+            <div class="price__grid">
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>INTEGRITY</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Honesty
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Consistency
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Trustworthiness
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Righteousness
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Cncerity
+                  </p>
+                </div>
+                <button class="btn price__btn">Learn More</button>
+              </div>
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>ETHICS</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Morality
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Empathy
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Integrity
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Respect
+                  </p>
+                  
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Principles
+                  </p>
+                  
+
+                </div>
+                <button class="btn price__btn">Read More</button>
+              </div>
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>WORK</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                  TRUST
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                   SUCESS
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Synergy
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Communication
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Collaboration
+                  </p>
+                </div>
+                <button class="btn price__btn">Read More</button>
+              </div>
+            </div>
+            <div class="price__grid">
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>SUPPORT</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Assistance
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Decision-making
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Encouragement
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Backing
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Adaptability
+                  </p>
+                </div>
+                <button class="btn price__btn">Learn More</button>
+              </div>
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>COMMITMENT</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Dedication
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Devotion
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Confidentiality
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Respect
+                  </p>
+                  
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Tenacity
+                  </p>
+                  
+
+                </div>
+                <button class="btn price__btn">Read More</button>
+              </div>
+              <div class="price__card">
+                <div class="price__card__content">
+                  <h3>SUPPORT</h3>
+                  <h3></h3>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Guidance
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Validation
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Encouragement
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Understanding
+                  </p>
+                  <p>
+                    <i class="ri-checkbox-circle-line"></i>
+                    Reliability
+                  </p>
+                </div>
+                <button class="btn price__btn">Read More</button>
+              </div>
+            </div>
+          </section>
+           <!-- ----------footer------- -->
+           <footer class="footer-section">
+            <div class="container">
+                <div class="footer-cta pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cta-text">
+                                    <h6>Find us</h6>
+                                    <span>Office: Anand, Survey no. 26 /3/2/1, Raje Chawk Lane No-2 
+                                      Near Shriram Mandir, Ambegaon Pathar, Pune MH-411043 </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="fas fa-phone"></i>
+                                <div class="cta-text">
+                                    <h6>Call us</h6>
+                                    <span>02024369900</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-4 mb-30">
+                            <div class="single-cta">
+                                <i class="far fa-envelope-open"></i>
+                                <div class="cta-text">
+                                    <h6>Mail us</h6>
+                                    <span>admin@cidcon.co.in</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-content pt-5 pb-5">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-logo">
+                                    <!-- <a href="index.html"><img src="inf" class="img-fluid" alt="logo"></a> -->
+                                </div>
+                                <div class="footer-text">
+                                    <p>CIDCON have external expert consultants in the field of 
+                                      Agriculture, Engineering, Livestock, Agri Marketing, Health & 
+                                      social development as need-based support for the 
+                                      assignment. 
+                                      </p>
+                                </div>
+                                <div class="footer-social-icon">
+                                    <span>Follow us</span>
+                                    <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                    <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Useful Links</h3>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">about</a></li>
+                                    <li><a href="#">services</a></li>
+                                    <li><a href="#">portfolio</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Expert Team</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Latest News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                            <div class="footer-widget">
+                                <div class="footer-widget-heading">
+                                    <h3>Subscribe</h3>
+                                </div>
+                                <div class="footer-text mb-25">
+                                    <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                                </div>
+                                <div class="subscribe-form">
+                                    <form action="#">
+                                        <input type="text" placeholder="Email Address">
+                                        <button><i class="fab fa-telegram-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2024,P2solutions </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="P21.HTML">Home</a></li>
+                                    <li><a href="#">Terms</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Policy</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+
+
+
+    
+    
+</body>
+</html>
